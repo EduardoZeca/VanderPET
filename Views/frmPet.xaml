@@ -4,148 +4,154 @@
              x:Class="VanderPet.Views.frmPet"
              Title="frmPet" BackgroundColor="White" Padding="20"
              NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout HorizontalOptions="Center">
-        <Label Text="Cadastre seu pet" 
-               FontSize="28"
-               FontAttributes="Bold"
-               TextColor="#333"
-               VerticalOptions="Center"
-               Margin="0, 10, 0, 0"/>
-        
-        <Label Text="ID" 
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               VerticalOptions="Center"
-               Margin="0, 10, 0, 0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
-            <Entry x:Name="txtID"
-                   Placeholder="ID do PET"
-                   IsReadOnly="True"
-                   FontSize="16"
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="Cadastre seu pet" 
+                   FontSize="28"
+                   FontAttributes="Bold"
                    TextColor="#333"
-                   BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
-        </Border>
-        
-        <Label Text="Nome"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               VerticalOptions="Center"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
-            <Entry x:Name="txtNome"
-                   Placeholder="Nome do PET"
-                   FontSize="16"
+                   VerticalOptions="Center"
+                   Margin="0, 10, 0, 0"/>
+
+            <Label Text="ID" 
+                   FontSize="14"
+                   FontAttributes="Bold"
                    TextColor="#333"
-                   BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
-        </Border>
-        
-        <Label Text="Especie"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
-            <Picker x:Name="pckEspecies"
+                   VerticalOptions="Center"
+                   Margin="0, 10, 0, 0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
+                <Entry x:Name="txtID"
+                       Placeholder="ID do PET"
+                       IsReadOnly="True"
+                       FontSize="16"
+                       TextColor="#333"
+                       BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
+            </Border>
+
+            <Label Text="Nome"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   VerticalOptions="Center"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
+                <Entry x:Name="txtNome"
+                       Placeholder="Nome do PET"
+                       FontSize="16"
+                       TextColor="#333"
+                       BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
+            </Border>
+
+            <Label Text="Especie"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0" Padding="15, 0, 5, 0">
+                <Picker x:Name="pckEspecies"
+                        Title="Selecione a Espécie"
+                        FontSize="16"
+                        TextColor="#333"
+                        TitleColor="#aaa"
+                        ItemDisplayBinding="{Binding Especie}">
+                </Picker>
+            </Border>
+
+            <Label Text="Raça"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
+                <Picker x:Name="pckRacas"
+                        Title="Selecione a Raça"
+                        FontSize="16"
+                        TextColor="#333"
+                        TitleColor="#aaa"
+                        ItemDisplayBinding="{Binding Raca}">
+                </Picker>
+            </Border>
+
+            <Label Text="Peso"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
+                <Entry x:Name="txtPeso"
+                       Placeholder="Peso do PET"
+                       Keyboard="Numeric"
+                       FontSize="16"
+                       TextColor="#333"
+                       BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
+            </Border>
+
+            <Label Text="Data Nascimento do Pet"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
+                <DatePicker x:Name="dtPckDataNasc"
+                            Format="dd/MM/yyyy"
+                            DateSelected="dtPckDataNasc_DateSelected"
+                            TextColor="Black"/>
+            </Border>
+
+            <Label Text="Idade do seu Pet"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
+                <Entry x:Name="txtIdade"
+                       Placeholder="Idade do PET (Calculada automaticamente)"
+                       IsReadOnly="True"
+                       FontSize="16"
+                       TextColor="#333"
+                       BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
+            </Border>
+
+            <Label Text="Serviço"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
+                <Picker x:Name="pckServicos"
+                        Title="Selecione o Serviço"
+                        FontSize="16"
+                        TextColor="Black"
+                        TitleColor="#aaa"
+                        ItemDisplayBinding="{Binding Servico}">
+                </Picker>
+            </Border>
+
+            <Label Text="Data para Serviço"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   Margin="0,10,0,0"/>
+            <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
+                <DatePicker x:Name="dtPckServico"
+                            Format="dd/MM/yyyy"
+                            TextColor="Black"/>
+            </Border>
+
+            <Button Text="Salvar"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
                     FontSize="16"
-                    TextColor="#333"
-                    TitleColor="#aaa"
-                    ItemDisplayBinding="{Binding Especie}">
-            </Picker>
-        </Border>
+                    Margin="0,20,0,0"
+                    Clicked="Button_Clicked"/>
 
-        <Label Text="Raça"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
-            <Picker x:Name="pckRacas"
+            <Button Text="Voltar"
+                    BackgroundColor="#f44336"
+                    TextColor="White"
                     FontSize="16"
-                    TextColor="#333"
-                    TitleColor="#aaa"
-                    ItemDisplayBinding="{Binding Raca}">
-            </Picker>
-        </Border>
+                    Margin="0,10,0,0"
+                    Clicked="Button_Clicked_1"/>
 
-        <Label Text="Peso"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
-            <Entry x:Name="txtPeso"
-                   Placeholder="Peso do PET"
-                   Keyboard="Numeric"
-                   FontSize="16"
-                   TextColor="#333"
-                   BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
-        </Border>
-        
-        <Label Text="Data Nascimento do Pet"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
-            <DatePicker x:Name="dtPckDataNasc"
-                Format="dd/MM/yyyy"
-                TextColor="Black"/>
-        </Border>
-        
-        <Label Text="Idade do seu Pet"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" Margin="0,7,0,0">
-            <Entry x:Name="txtIdade"
-                   Placeholder="Idade do PET"
-                   IsReadOnly="True"
-                   FontSize="16"
-                   TextColor="#333"
-                   BackgroundColor="Transparent" PlaceholderColor="#aaa"/>
-        </Border>
-        
-        <Label Text="Serviço"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
-            <Picker x:Name="pckServicos"
-                    FontSize="16"
-                    TextColor="Black"
-                    TitleColor="#aaa"
-                    ItemDisplayBinding="{Binding Servico}">
-            </Picker>
-        </Border>
-        
-        <Label Text="Data para Serviço"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#333"
-               Margin="0,10,0,0"/>
-        <Border Stroke="#ddd" StrokeThickness="1" Background="White" StrokeShape="RoundRectangle 10" HeightRequest="45" Margin="0,7,0,0">
-            <DatePicker x:Name="dtPckServico"
-                        Format="dd/MM/yyyy"
-                        TextColor="Black"/>
-        </Border>
-
-        <Button Text="Salvar"
-                BackgroundColor="#4CAF50"
-                TextColor="White"
-                FontSize="16"
-                Margin="0,20,0,0"
-                Clicked="Button_Clicked"/>
-        
-        <Button Text="Voltar"
-                BackgroundColor="#f44336"
-                TextColor="White"
-                FontSize="16"
-                Margin="0,10,0,0"
-                Clicked="Button_Clicked_1"/>
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
