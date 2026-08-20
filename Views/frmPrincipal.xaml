@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VanderPet.Views.frmPrincipal"
+             Title="frmPrincipal" BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout Padding="16" Spacing="24">
+        <Border BackgroundColor="#FF6F61" StrokeThickness="0" StrokeShape="RoundRectangle 8" Padding="16" Margin="0, 28, 0, 0">
+            <Label Text="VanderPET" FontSize="28" TextColor="#FFFFFF" HorizontalOptions="Center"/>
+        </Border>
+
+        <Image Source="logo.jpeg"></Image>
+        
+        <Button Text="LOGIN" Clicked="Button_Clicked"/>
+        <Button Text="PETS" Clicked="Button_Clicked_1"/>
+    </VerticalStackLayout>
+</ContentPage>
